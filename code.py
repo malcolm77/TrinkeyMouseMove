@@ -1,3 +1,4 @@
+# from https://www.tomshardware.com/how-to/diy-mouse-jiggler-raspberry-pi-pico with a few minor updates
 
 import usb_hid
 from adafruit_hid.mouse import Mouse
@@ -25,15 +26,19 @@ while True:
         sleep(5)
     elif button.value == True and active == 1 and button_press == 1:
         pixel.fill((0, 32, 0))
+
         m.move(-100, 0, 0)
         print("I'm working")
         sleep(0.5)
+        
         m.move(100, 0, 0)
         print("I'm so busy")
         sleep(0.5)
+        
         m.move(0, -100, 0)
         print("So much to do")
         sleep(0.5)
+        
         m.move(0, 100, 0)
         print("I need a vacation")
         sleep(0.5)
