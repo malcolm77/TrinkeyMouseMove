@@ -27,20 +27,24 @@ while True:
     elif button.value == True and active == 1 and button_press == 1:
         pixel.fill((0, 32, 0))
 
-        m.move(-100, 0, 0)
-        print("I'm working")
-        sleep(0.5)
-        
+        # right
         m.move(100, 0, 0)
-        print("I'm so busy")
-        sleep(0.5)
-        
-        m.move(0, -100, 0)
-        print("So much to do")
-        sleep(0.5)
-        
+        # print("I'm so busy")
+        sleep(0.5)       
+
+        # down
         m.move(0, 100, 0)
-        print("I need a vacation")
+        # print("I need a vacation")
+        sleep(0.5)
+
+        # left
+        m.move(-100, 0, 0)
+        # print("I'm working")
+        sleep(0.5)
+        
+        # up
+        m.move(0, -100, 0)
+        # print("So much to do")
         sleep(0.5)
     elif button.value == False and active == 1 and button_press == 1:
         pixel.fill((32, 0, 0))
